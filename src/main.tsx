@@ -6,12 +6,14 @@ import {
   RouterProvider,
 } from "react-router";
 import { router } from './components/routes/route';
+import { ThemeProvider } from './Providers/ThemeProvider';
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <div className='max-w-7xl mx-auto'>
-        <RouterProvider router={router} />
-      </div>
+    <ThemeProvider><div className='max-w-7xl mx-auto'>
+          <RouterProvider router={router} />
+      </div></ThemeProvider>
+      
   </StrictMode>,
 )
